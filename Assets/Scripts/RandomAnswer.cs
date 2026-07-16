@@ -5,16 +5,23 @@ public class RandomAnswer : MonoBehaviour
 {
     Transform rowCont;
     int corrTile;
+    Vector3 bottomPos;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rowCont = gameObject.transform;
+        bottomPos = new Vector3(rowCont.position.x, -6.78f, 0f);
         correctAnswer();
     }
 
     void correctAnswer()
     {
-        corrTile = UnityEngine.Random.Range(0, 3);
+        for (int i = 0; i < 4; i++)
+        {
+            rowCont.GetChild(i).GetComponent<Tiledef>().isAnswer = false;
+        }
+
+        corrTile = UnityEngine.Random.Range(0, 4);
         Tiledef chosenOne = rowCont.GetChild(corrTile).GetComponent<Tiledef>();
         chosenOne.isAnswer = true;
     }
@@ -23,8 +30,14 @@ public class RandomAnswer : MonoBehaviour
     {
         if (ShiftTimer.canShift)
         {
-            rowCont.transform.position = new Vector3(rowCont.transform.position.x, rowCont.transform.position.y + 2.26f, rowCont.transform.position.z);
+            rowCont.transform.position = new Vector3(rowCont.position.x, rowCont.position.y + 2.26f, rowCont.position.z);
         }
+    }
+
+    void OnBecameInvisible()
+    {
+        rowCont.transform.position = bottomPos;
+        correctAnswer();
     }
 
     // Update is called once per frame
