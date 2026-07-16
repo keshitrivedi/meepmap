@@ -19,9 +19,17 @@ public class RandomAnswer : MonoBehaviour
         chosenOne.isAnswer = true;
     }
 
+    void ShiftUp()
+    {
+        if (ShiftTimer.canShift)
+        {
+            rowCont.transform.position = new Vector3(rowCont.transform.position.x, rowCont.transform.position.y + 2.26f, rowCont.transform.position.z);
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
-        
+        ShiftUp();
     }
 }
