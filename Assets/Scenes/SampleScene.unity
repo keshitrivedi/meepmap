@@ -429,7 +429,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce5d754bccfb4494fb1adf92d37636e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Qp
-  question: {fileID: 8645543631285290310, guid: de17aafcdc1d8c144adbd3faf5c78e47, type: 3}
 --- !u!1001 &1042324398
 PrefabInstance:
   m_ObjectHideFlags: 0
