@@ -10,7 +10,6 @@ public class Tiledef : MonoBehaviour
     Dabao dabao;
     SpriteRenderer bubbleSprite;
     Color32 defClr;
-    Transform bubbleTransform;
     RandomAnswer parentRow;
     public bool sahiBhai;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -18,7 +17,6 @@ public class Tiledef : MonoBehaviour
     {
         bubbleSprite = GetComponent<SpriteRenderer>();
         defClr = new Color32(193, 193, 193, 255);
-        bubbleTransform = GetComponent<Transform>();
         dabao = GetComponent<Dabao>();
         parentRow = GetComponentInParent<RandomAnswer>();
         sahiBhai = false;
@@ -30,6 +28,7 @@ public class Tiledef : MonoBehaviour
         isColoured = false;
         isAnswer = false;
         sahiBhai = false;
+        dabao.isClicked = false;
     }
 
     void ChangeToCorrect()
@@ -48,9 +47,15 @@ public class Tiledef : MonoBehaviour
 
     void CorrectClicked()
     {
-        if (dabao.isClicked && isAnswer && !sahiBhai)
+        if (dabao.isClicked && !sahiBhai)
         {
-            Qp.score++;
+            if (isAnswer)
+            {
+                Qp.score++;
+            } else
+            {
+                Qp.score--;
+            }
             sahiBhai = true;
             Debug.Log(Qp.score);
         }
