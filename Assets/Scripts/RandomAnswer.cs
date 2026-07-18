@@ -57,6 +57,23 @@ public class RandomAnswer : MonoBehaviour
         isShifting = false;
         targetPos = bottomPos;
         correctAnswer();
+
+        for (int i = 0; i < 4; i++)
+        {
+            rowCont.GetChild(i).GetComponent<Dabao>().isClicked = false;
+        }
+    }
+
+    public bool IsUnmarked()
+    {
+        for (int i = 0; i < 4; i++)
+        {
+            if (rowCont.GetChild(i).GetComponent<Dabao>().isClicked)
+            {
+                return false;
+            }
+        }
+        return true;
     }
 
     // Update is called once per frame
