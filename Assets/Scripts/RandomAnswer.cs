@@ -76,6 +76,15 @@ public class RandomAnswer : MonoBehaviour
         return true;
     }
 
+    public bool isCurrentQuestion()
+    {
+        if(rowCont.transform.position.y >= -1 && rowCont.transform.position.y <= 1)
+        {
+            return true;
+        }
+        return false;
+    }
+
     // Update is called once per frame
     void Update()
     {

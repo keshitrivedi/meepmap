@@ -14,7 +14,7 @@ public class Dabao : MonoBehaviour, IPointerDownHandler
     }
     public void OnPointerDown(PointerEventData eventData)
     {
-        if (parentRow.IsUnmarked() && transform.position.y >= -1 && transform.position.y <= 1)
+        if (parentRow.IsUnmarked() && parentRow.isCurrentQuestion())
         { 
             isClicked = true;
             tile.ChangeToClicked();
