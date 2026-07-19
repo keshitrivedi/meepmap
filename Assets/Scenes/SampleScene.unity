@@ -368,6 +368,7 @@ GameObject:
   - component: {fileID: 681552072}
   - component: {fileID: 681552071}
   - component: {fileID: 681552073}
+  - component: {fileID: 681552074}
   m_Layer: 0
   m_Name: Paper
   m_TagString: Untagged
@@ -467,6 +468,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce5d754bccfb4494fb1adf92d37636e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Qp
+--- !u!114 &681552074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 681552070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90b560745d2efc84aa7deb1c74b170ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Counter
 --- !u!1001 &1042324398
 PrefabInstance:
   m_ObjectHideFlags: 0

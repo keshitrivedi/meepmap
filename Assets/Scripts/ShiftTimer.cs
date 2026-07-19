@@ -3,24 +3,25 @@ using UnityEngine;
 public class ShiftTimer : MonoBehaviour
 {
     public static bool canShift = false;
-    private float shiftTime = 3f;
+    static public float shiftTime = 3f;
+    float timer;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        timer = shiftTime;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (shiftTime > 0)
+        timer -= Time.deltaTime;
+        if (timer > 0)
         {
-            shiftTime -= Time.deltaTime;
             canShift = false;
         } else
         {
-            shiftTime = 3f;
+            timer = shiftTime;
             canShift = true;
         }
         

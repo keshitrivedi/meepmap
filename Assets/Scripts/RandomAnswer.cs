@@ -7,8 +7,10 @@ public class RandomAnswer : MonoBehaviour
     int corrTile;
     Vector3 bottomPos;
     Vector3 targetPos;
-    float speed = 50f;
     bool isShifting = false;
+
+    bool hasPassed;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -16,6 +18,7 @@ public class RandomAnswer : MonoBehaviour
         bottomPos = new Vector3(rowCont.position.x, -6.78f, 0f);
         targetPos = new Vector3(rowCont.position.x, rowCont.position.y + 2.26f, rowCont.position.z);
         correctAnswer();
+        hasPassed = false;
     }
 
     void correctAnswer()
@@ -43,7 +46,7 @@ public class RandomAnswer : MonoBehaviour
 
         if (isShifting)
         {
-            rowCont.transform.position = Vector3.MoveTowards(rowCont.position, targetPos, speed*Time.deltaTime);
+            rowCont.transform.position = Vector3.MoveTowards(rowCont.position, targetPos, Counter.speed*Time.deltaTime);
             if (rowCont.position == targetPos)
             {
                 isShifting = false;
@@ -57,6 +60,7 @@ public class RandomAnswer : MonoBehaviour
         isShifting = false;
         targetPos = bottomPos;
         correctAnswer();
+        hasPassed = false;
 
         for (int i = 0; i < 4; i++)
         {
@@ -80,14 +84,33 @@ public class RandomAnswer : MonoBehaviour
     {
         if(rowCont.transform.position.y >= -1 && rowCont.transform.position.y <= 1)
         {
+            // hasPassed = true;
             return true;
         }
         return false;
     }
 
+    void QuestionCounter()
+{
+    if (isCurrentQuestion())
+    {
+        if (!hasPassed)
+        {
+            Counter.questionCounter++;
+            hasPassed = true;
+            // Debug.Log(Counter.questionCounter);
+        }
+    }
+    else
+    {
+        hasPassed = false;
+    }
+}
+
     // Update is called once per frame
     void Update()
     {
+        QuestionCounter();
         ShiftUp();
     }
 }

@@ -18,7 +18,7 @@ public class Dabao : MonoBehaviour, IPointerDownHandler
         { 
             isClicked = true;
             tile.ChangeToClicked();
-            Debug.Log("tidinggggg");
+            // Debug.Log("tidinggggg");
         }
     }
 

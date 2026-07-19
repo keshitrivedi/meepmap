@@ -57,7 +57,7 @@ public class Tiledef : MonoBehaviour
                 Qp.score--;
             }
             sahiBhai = true;
-            Debug.Log(Qp.score);
+            // Debug.Log(Qp.score);
         }
     }
 
