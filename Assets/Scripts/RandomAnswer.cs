@@ -98,7 +98,7 @@ public class RandomAnswer : MonoBehaviour
         {
             Counter.questionCounter++;
             hasPassed = true;
-            // Debug.Log(Counter.questionCounter);
+            Debug.Log(Counter.questionCounter);
         }
     }
     else
