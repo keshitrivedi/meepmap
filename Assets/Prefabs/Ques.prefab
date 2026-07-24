@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6768382967354875559}
   - component: {fileID: 7352471349406293134}
   - component: {fileID: 1646089987025205893}
+  - component: {fileID: 8185001004854548704}
   m_Layer: 0
   m_Name: Ques
   m_TagString: rowh
@@ -108,6 +109,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79688953e3c3a004192e9aff5ace3391, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RandomAnswer
+--- !u!114 &8185001004854548704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8645543631285290310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 538b13939adb41d4b86a9340eea3347d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Bacchas
+  bacchaSprites:
+  - {fileID: 21300000, guid: d6c3add23200f394eae627c218ea556e, type: 3}
+  - {fileID: 21300000, guid: a6e1829c48caec64e97b5aa9f2de52e5, type: 3}
+  - {fileID: 21300000, guid: 15671be80e6764d43becdccac1902e59, type: 3}
+  - {fileID: 21300000, guid: d5a46772aa708c5468572e431e207b2d, type: 3}
 --- !u!1001 &575020927649488426
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -11,6 +11,8 @@ public class RandomAnswer : MonoBehaviour
 
     bool hasPassed;
     
+    Bacchas bacchaScr;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -19,6 +21,7 @@ public class RandomAnswer : MonoBehaviour
         targetPos = new Vector3(rowCont.position.x, rowCont.position.y + 2.26f, rowCont.position.z);
         correctAnswer();
         hasPassed = false;
+        bacchaScr = GetComponent<Bacchas>();
     }
 
     void correctAnswer()
@@ -66,6 +69,8 @@ public class RandomAnswer : MonoBehaviour
         {
             rowCont.GetChild(i).GetComponent<Dabao>().isClicked = false;
         }
+
+        bacchaScr.ResetAllBaccha();
     }
 
     public bool IsUnmarked()
