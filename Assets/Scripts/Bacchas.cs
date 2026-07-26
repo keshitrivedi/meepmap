@@ -21,7 +21,7 @@ public class Bacchas : MonoBehaviour
 {
     //refrence to QuestionCounter (randomanser)
     [SerializeField] private Sprite[] bacchaSprites;
-    private int targetBaccha;
+    public int targetBaccha;
     private Transform[] bubbles;
     // List<int> remainingSprites = new List<int> {0, 1, 2, 3};
     // bool isAnswerMarked;
@@ -32,7 +32,7 @@ public class Bacchas : MonoBehaviour
 
     void Awake()
     {
-        targetBaccha = 2;
+        TargetDisplay.targetBaccha = 2;
         bubbles = new Transform[4];
         sethai = false;
 
@@ -50,6 +50,8 @@ public class Bacchas : MonoBehaviour
     void setBaccha()
     {   if (!sethai)
         {
+            List<int> remIdx = new List<int>{0, 1, 2, 3};
+            remIdx.Remove(TargetDisplay.targetBaccha);
             for (int i = 0; i < 4; i++)
             {
                 // bubbles[i] = transform.GetChild(i);
@@ -70,13 +72,11 @@ public class Bacchas : MonoBehaviour
                 //     bacchaIdxing[randomBaccha].isMarked = true;
                 //     bubbles[i].GetChild(0).GetComponent<SpriteRenderer>().sprite = bacchaIdxing[randomBaccha].sprite;
                 // }
-                List<int> remIdx = new List<int>{0, 1, 2, 3};
-                remIdx.Remove(targetBaccha);
 
                 bubbles[i] = transform.GetChild(i);
                 if (bubbles[i].GetComponent<Tiledef>().isAnswer)
                 {
-                    bubbles[i].GetChild(0).GetComponent<SpriteRenderer>().sprite = bacchaIdxing[targetBaccha].sprite;
+                    bubbles[i].GetChild(0).GetComponent<SpriteRenderer>().sprite = bacchaIdxing[TargetDisplay.targetBaccha].sprite;
                     continue;
                 }
 
