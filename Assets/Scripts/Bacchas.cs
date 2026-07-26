@@ -52,25 +52,41 @@ public class Bacchas : MonoBehaviour
         {
             for (int i = 0; i < 4; i++)
             {
+                // bubbles[i] = transform.GetChild(i);
+                // if (bubbles[i].GetComponent<Tiledef>().isAnswer)
+                // {
+                //     bubbles[i].GetChild(0).GetComponent<SpriteRenderer>().sprite = bacchaIdxing[targetBaccha].sprite;
+                //     bacchaIdxing[targetBaccha].isTarget = true;
+                //     bacchaIdxing[targetBaccha].isMarked = true;
+                //     // isAnswerMarked = true;
+                // } else
+                // {
+                //     int randomBaccha = Random.Range(0, 4);
+                //     while (bacchaIdxing[randomBaccha].isMarked)
+                //     {
+                //         randomBaccha = Random.Range(0, 4);
+                //     }
+
+                //     bacchaIdxing[randomBaccha].isMarked = true;
+                //     bubbles[i].GetChild(0).GetComponent<SpriteRenderer>().sprite = bacchaIdxing[randomBaccha].sprite;
+                // }
+                List<int> remIdx = new List<int>{0, 1, 2, 3};
+                remIdx.Remove(targetBaccha);
+
                 bubbles[i] = transform.GetChild(i);
                 if (bubbles[i].GetComponent<Tiledef>().isAnswer)
                 {
                     bubbles[i].GetChild(0).GetComponent<SpriteRenderer>().sprite = bacchaIdxing[targetBaccha].sprite;
-                    bacchaIdxing[targetBaccha].isTarget = true;
-                    bacchaIdxing[targetBaccha].isMarked = true;
-                    // isAnswerMarked = true;
-                } else
-                {
-                    int randomBaccha = Random.Range(0, 4);
-                    while (bacchaIdxing[randomBaccha].isMarked)
-                    {
-                        randomBaccha = Random.Range(0, 4);
-                    }
-
-                    bacchaIdxing[randomBaccha].isMarked = true;
-                    bubbles[i].GetChild(0).GetComponent<SpriteRenderer>().sprite = bacchaIdxing[randomBaccha].sprite;
+                    continue;
                 }
+
+                int idxx = Random.Range(0, remIdx.Count);
+                int id = remIdx[idxx];
+                bubbles[i].GetChild(0).GetComponent<SpriteRenderer>().sprite = bacchaSprites[id];
+
+                remIdx.RemoveAt(idxx);
             }
+
             sethai = true;
         }
     }
@@ -84,11 +100,18 @@ public class Bacchas : MonoBehaviour
         }
     }
 
+    public void AglaAgla()
+    {
+        sethai = false;
+        ResetAllBaccha();
+    }
+
     // function to set target every 4 questions
 
     // Update is called once per frame
     void Update()
     {
         setBaccha();
+        // Debug.Log(targetBaccha);
     }
 }

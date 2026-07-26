@@ -70,7 +70,7 @@ public class RandomAnswer : MonoBehaviour
             rowCont.GetChild(i).GetComponent<Dabao>().isClicked = false;
         }
 
-        bacchaScr.ResetAllBaccha();
+        bacchaScr.AglaAgla();
     }
 
     public bool IsUnmarked()
