@@ -32,7 +32,7 @@ public class Bacchas : MonoBehaviour
 
     void Awake()
     {
-        TargetDisplay.targetBaccha = 2;
+        // TargetDisplay.targetBaccha = 2;
         bubbles = new Transform[4];
         sethai = false;
 
@@ -47,7 +47,7 @@ public class Bacchas : MonoBehaviour
         // isAnswerMarked = false;
     }
 
-    void setBaccha()
+    public void setBaccha()
     {   if (!sethai)
         {
             List<int> remIdx = new List<int>{0, 1, 2, 3};
@@ -109,9 +109,15 @@ public class Bacchas : MonoBehaviour
     // function to set target every 4 questions
 
     // Update is called once per frame
-    void Update()
+
+    void OnBecameVisible()
     {
         setBaccha();
+    }
+
+    void Update()
+    {
+        // setBaccha();
         // Debug.Log(targetBaccha);
     }
 }

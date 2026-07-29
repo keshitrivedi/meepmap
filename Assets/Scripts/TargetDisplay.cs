@@ -14,6 +14,7 @@ public class TargetDisplay : MonoBehaviour
     {
         targetPanel = GetComponent<UnityEngine.UI.Image>();
         prevTargetBaccha = -1;
+        targetBaccha = Random.Range(0, 4);
     }
 
     void SetTargetSpritePanel()
@@ -43,7 +44,7 @@ public class TargetDisplay : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // trackTarget();
-        // SetTargetSpritePanel();
+        trackTarget();
+        SetTargetSpritePanel();
     }
 }
