@@ -1,4 +1,3 @@
-using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
 
 public class TargetDisplay : MonoBehaviour
@@ -9,12 +8,17 @@ public class TargetDisplay : MonoBehaviour
     private UnityEngine.UI.Image targetPanel;
 
     bool isssset;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    int nextBoundary;      // the questionCounter value that triggers the next reroll
+    bool firstGroupDone;
+
     void Start()
     {
         targetPanel = GetComponent<UnityEngine.UI.Image>();
         prevTargetBaccha = -1;
         targetBaccha = Random.Range(0, 4);
+
+        nextBoundary = 0;      // first group starts rolling right away
+        firstGroupDone = false;
     }
 
     void SetTargetSpritePanel()
@@ -24,24 +28,28 @@ public class TargetDisplay : MonoBehaviour
             prevTargetBaccha = targetBaccha;
             targetPanel.sprite = targetBcchs[targetBaccha];
         }
-        
     }
 
     void trackTarget()
     {
-        if (Counter.isBreakTime)
+        if (Counter.questionCounter >= nextBoundary)
         {
             if (!isssset)
             {
                 targetBaccha = Random.Range(0, 4);
                 isssset = true;
+
+                // first group is size 2, every group after is size 4
+                nextBoundary += firstGroupDone ? 4 : 2;
+                firstGroupDone = true;
             }
-        } else
+        }
+        else
         {
             isssset = false;
         }
     }
-    // Update is called once per frame
+
     void Update()
     {
         trackTarget();

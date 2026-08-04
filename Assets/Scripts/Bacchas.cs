@@ -77,6 +77,7 @@ public class Bacchas : MonoBehaviour
                 if (bubbles[i].GetComponent<Tiledef>().isAnswer)
                 {
                     bubbles[i].GetChild(0).GetComponent<SpriteRenderer>().sprite = bacchaIdxing[TargetDisplay.targetBaccha].sprite;
+                    Debug.Log(TargetDisplay.targetBaccha);
                     continue;
                 }
 

@@ -24,7 +24,7 @@ public class ShiftTimer : MonoBehaviour
         } else
         {
             // timer = shiftTime;
-            if (Counter.isBreakTime)
+            if (Counter.questionCounter % 4 == 0)
             {
                 timer = breakTime;
                 Debug.Log("breakdhuew");
