@@ -22,16 +22,17 @@ public class ShiftTimer : MonoBehaviour
         {
             canShift = false;
         } else
-        {
+        {   
+            timer = shiftTime;
             // timer = shiftTime;
-            if (Counter.questionCounter % 4 == 0)
-            {
-                timer = breakTime;
-                Debug.Log("breakdhuew");
-            } else
-            {
-                timer = shiftTime;
-            }
+            // if (Counter.questionCounter % 4 == 0)
+            // {
+            //     timer = breakTime;
+            //     Debug.Log("breakdhuew");
+            // } else
+            // {
+            //     timer = shiftTime;
+            // }
             canShift = true;
         }
         

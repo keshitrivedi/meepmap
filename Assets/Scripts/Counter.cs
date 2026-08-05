@@ -24,8 +24,8 @@ public class Counter : MonoBehaviour
     {
         if (!isQuestionRecorded && questionCounter % 4 == 0 && ShiftTimer.shiftTime >= 0.4f)
         {
-            ShiftTimer.shiftTime -= 0.1f;
-            ShiftTimer.shiftTime = Mathf.Max(0.4f, ShiftTimer.shiftTime - 0.1f);
+            // ShiftTimer.shiftTime -= 0.1f;
+            // ShiftTimer.shiftTime = Mathf.Max(0.4f, ShiftTimer.shiftTime - 0.1f);
             isQuestionRecorded = true;
             // isBreakTime = true;
             // Debug.Log(ShiftTimer.shiftTime);
@@ -42,6 +42,6 @@ public class Counter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        QuestionSegmenter();
+        // QuestionSegmenter();
     }
 }
