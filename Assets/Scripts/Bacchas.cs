@@ -27,7 +27,7 @@ public class Bacchas : MonoBehaviour
     // bool isAnswerMarked;
 
     // Dictionary<int, Sprite> spriteIndexD = new Dictionary<int, Sprite>();
-    private List<BacchaDef> bacchaIdxing = new List<BacchaDef>();
+    public List<BacchaDef> bacchaIdxing = new List<BacchaDef>();
     bool sethai;
 
     void Awake()
@@ -77,6 +77,7 @@ public class Bacchas : MonoBehaviour
                 if (bubbles[i].GetComponent<Tiledef>().isAnswer)
                 {
                     bubbles[i].GetChild(0).GetComponent<SpriteRenderer>().sprite = bacchaIdxing[TargetDisplay.targetBaccha].sprite;
+                    bacchaIdxing[TargetDisplay.targetBaccha].isTarget = true;
                     Debug.Log(TargetDisplay.targetBaccha);
                     continue;
                 }

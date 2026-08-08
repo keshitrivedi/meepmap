@@ -295,6 +295,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6768382967354875559, guid: de17aafcdc1d8c144adbd3faf5c78e47, type: 3}
   m_PrefabInstance: {fileID: 232464176}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &321684535 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1646089987025205893, guid: de17aafcdc1d8c144adbd3faf5c78e47, type: 3}
+  m_PrefabInstance: {fileID: 232464176}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79688953e3c3a004192e9aff5ace3391, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RandomAnswer
 --- !u!4 &464918949 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6768382967354875559, guid: de17aafcdc1d8c144adbd3faf5c78e47, type: 3}
@@ -789,11 +800,33 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de17aafcdc1d8c144adbd3faf5c78e47, type: 3}
+--- !u!114 &1246852111 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1646089987025205893, guid: de17aafcdc1d8c144adbd3faf5c78e47, type: 3}
+  m_PrefabInstance: {fileID: 1042324398}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79688953e3c3a004192e9aff5ace3391, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RandomAnswer
 --- !u!4 &1267311722 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6768382967354875559, guid: de17aafcdc1d8c144adbd3faf5c78e47, type: 3}
   m_PrefabInstance: {fileID: 1361131198}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1267311724 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1646089987025205893, guid: de17aafcdc1d8c144adbd3faf5c78e47, type: 3}
+  m_PrefabInstance: {fileID: 1361131198}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79688953e3c3a004192e9aff5ace3391, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RandomAnswer
 --- !u!1001 &1361131198
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -863,6 +896,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de17aafcdc1d8c144adbd3faf5c78e47, type: 3}
+--- !u!114 &1488178387 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1646089987025205893, guid: de17aafcdc1d8c144adbd3faf5c78e47, type: 3}
+  m_PrefabInstance: {fileID: 2095018657}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79688953e3c3a004192e9aff5ace3391, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RandomAnswer
 --- !u!1 &1508452125
 GameObject:
   m_ObjectHideFlags: 0
@@ -912,6 +956,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6768382967354875559, guid: de17aafcdc1d8c144adbd3faf5c78e47, type: 3}
   m_PrefabInstance: {fileID: 1203055597}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1572084975 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1646089987025205893, guid: de17aafcdc1d8c144adbd3faf5c78e47, type: 3}
+  m_PrefabInstance: {fileID: 1203055597}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79688953e3c3a004192e9aff5ace3391, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RandomAnswer
 --- !u!1 &1906256914
 GameObject:
   m_ObjectHideFlags: 0
@@ -996,6 +1051,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6768382967354875559, guid: de17aafcdc1d8c144adbd3faf5c78e47, type: 3}
   m_PrefabInstance: {fileID: 1069571546}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1990472446 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1646089987025205893, guid: de17aafcdc1d8c144adbd3faf5c78e47, type: 3}
+  m_PrefabInstance: {fileID: 1069571546}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79688953e3c3a004192e9aff5ace3391, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RandomAnswer
 --- !u!1001 &2095018657
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1158,6 +1224,13 @@ MonoBehaviour:
   - {fileID: 21300000, guid: a6e1829c48caec64e97b5aa9f2de52e5, type: 3}
   - {fileID: 21300000, guid: 15671be80e6764d43becdccac1902e59, type: 3}
   - {fileID: 21300000, guid: d5a46772aa708c5468572e431e207b2d, type: 3}
+  konsaCurrent:
+  - {fileID: 1572084975}
+  - {fileID: 321684535}
+  - {fileID: 1246852111}
+  - {fileID: 1488178387}
+  - {fileID: 1990472446}
+  - {fileID: 1267311724}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -1,4 +1,6 @@
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class TargetDisplay : MonoBehaviour
 {
@@ -8,8 +10,9 @@ public class TargetDisplay : MonoBehaviour
     private UnityEngine.UI.Image targetPanel;
 
     bool isssset;
-    int nextBoundary;      // the questionCounter value that triggers the next reroll
+    int nextBoundary;
     bool firstGroupDone;
+    [SerializeField] private RandomAnswer[] konsaCurrent;
 
     void Start()
     {
@@ -17,7 +20,7 @@ public class TargetDisplay : MonoBehaviour
         prevTargetBaccha = -1;
         targetBaccha = Random.Range(0, 4);
 
-        nextBoundary = 0;      // first group starts rolling right away
+        nextBoundary = 0;
         firstGroupDone = false;
     }
 
@@ -30,6 +33,25 @@ public class TargetDisplay : MonoBehaviour
         }
     }
 
+    void HorribleselectCurrent()
+    {
+        for (int i = 0; i < konsaCurrent.Length; i++)
+        {
+            if (konsaCurrent[i].isCurrentQuestion())
+            {
+                Bacchas currBach = konsaCurrent[i].gameObject.GetComponent<Bacchas>();
+                List<BacchaDef> currBachIdx = currBach.bacchaIdxing;
+                for (int j = 0; j < currBachIdx.Count; j++)
+                {
+                    if (currBachIdx[j].isTarget)
+                    {
+                        targetPanel.sprite = targetBcchs[j];
+                    }
+                }
+            }
+        }
+    }
+
     void trackTarget()
     {
         if (Counter.questionCounter >= nextBoundary)
@@ -39,7 +61,7 @@ public class TargetDisplay : MonoBehaviour
                 targetBaccha = Random.Range(0, 4);
                 isssset = true;
 
-                // first group is size 2, every group after is size 4
+                
                 nextBoundary += firstGroupDone ? 4 : 2;
                 firstGroupDone = true;
             }
@@ -53,6 +75,7 @@ public class TargetDisplay : MonoBehaviour
     void Update()
     {
         trackTarget();
-        SetTargetSpritePanel();
+        // SetTargetSpritePanel();
+        HorribleselectCurrent();
     }
 }
