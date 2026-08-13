@@ -3,7 +3,7 @@ using UnityEngine;
 public class ShiftTimer : MonoBehaviour
 {
     public static bool canShift = false;
-    static public float shiftTime = 2f;
+    static public float shiftTime = 1f;
     static public float breakTime = 2f;
     float timer;
 

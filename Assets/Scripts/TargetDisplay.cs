@@ -14,6 +14,9 @@ public class TargetDisplay : MonoBehaviour
     bool firstGroupDone;
     [SerializeField] private RandomAnswer[] konsaCurrent;
 
+    // 4321
+    
+
     void Start()
     {
         targetPanel = GetComponent<UnityEngine.UI.Image>();
