@@ -64,7 +64,7 @@ public class Tiledef : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ChangeToCorrect();
+        // ChangeToCorrect();
         CorrectClicked();
     }
 }
